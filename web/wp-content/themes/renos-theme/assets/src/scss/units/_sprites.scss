@@ -1,0 +1,30 @@
+*[class^="sprite-"] {
+  display: inline-block;
+  outline: none;
+  background-repeat: no-repeat;
+}
+
+/* Examples to get you started
+
+  // Basic Sprite
+  .sprite-logo {
+    @include retina-image('../img/logo', 100px 50px, png, null, -2x);
+    width: 100px;
+    height: 50px;
+  }
+
+  // Sprite inheritance
+  *[class^="sprite-social"] {
+    @include retina-image('../img/sprite', 200px 200px, png, null, -2x);
+    width: 50px;
+    height: 50px;
+  }
+  .sprite-social-facebook {
+    background-position: 0 0;
+  }
+  .sprite-social-twitter {
+    background-position: -50px 0;
+  }
+  ...etc
+
+-- */

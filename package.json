@@ -1,0 +1,43 @@
+{
+  "name": "CMN-Starter-Theme.com",
+  "shortName": "cstcom-theme",
+  "version": "1.6.0",
+  "description": "[CMN-Starter-Theme.com](http://www.cmn-starter-theme.com/) ========================================",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "browser-sync": "^2.6.0",
+    "css-mqpacker": "^4.0.1",
+    "cssnano": "^3.5.2",
+    "del": "^1.1.1",
+    "glob": "^5.0.5",
+    "gulp": "^3.8.11",
+    "gulp-changed": "^1.2.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-header": "^1.2.2",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.10.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4",
+    "imagemin-svgo": "^4.2.1",
+    "immutable-css": "^1.1.1",
+    "list-selectors": "^2.0.0",
+    "postcss-cssstats": "^1.0.0",
+    "postcss-ordered-values": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HigherEducation/CMN-Starter-Theme.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HigherEducation/CMN-Starter-Theme.com/issues"
+  },
+  "homepage": "https://github.com/HigherEducation/CMN-Starter-Theme.com"
+}

@@ -1,0 +1,69 @@
+body {
+  margin: 0 $body-gutter;
+
+  .wrapper {
+    @include outer-container;
+    background: #ddd;
+
+    @include media($desk) {
+      max-width: $desk-max;
+    }
+
+    @include media($wall) {
+      max-width: $wall-max;
+    }
+  }
+
+  /* Example Grid
+   * Modify or delete as you see fit.  The following CSS will set up an example
+   * 2-column grid at the various widths defined in settings.scss.  Un-comment
+   * the rules and add the example HTML to home.php to see it working:
+
+  // HTML
+  <div class="wrapper">
+    <div class="main-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="sidebar">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+
+  // CSS 
+  .main-content,
+  .sidebar {
+    background: #bbb;
+    padding: 20px;
+  }
+  .main-content {
+    @include span-columns(2);
+
+    @include media($lap) {
+      @include span-columns(4);
+    }
+
+    @include media($desk) {
+      @include span-columns(9);
+    }
+
+    @include media($wall) {
+      @include span-columns(8);
+    }
+  }
+  .sidebar {
+    @include span-columns(2);
+
+    @include media($lap) {
+      @include span-columns(2);
+    }
+
+    @include media($desk) {
+      @include span-columns(3);
+    }
+
+    @include media($wall) {
+      @include span-columns(4);
+    }
+  }
+  */
+}
