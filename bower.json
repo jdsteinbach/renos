@@ -2,6 +2,9 @@
   "name": "renos",
   "version": "1.0.0",
   "dependencies": {
-    "genesis-wordpress": "~0.2.65"
+    "genesis-wordpress": "~0.2.65",
+    "bourbon": "~4.2.3",
+    "neat": "~1.7.2",
+    "bitters": "~1.0.0"
   }
 }

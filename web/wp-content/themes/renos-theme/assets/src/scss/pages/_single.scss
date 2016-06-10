@@ -1,0 +1,6 @@
+.post-meta {
+  @extend %tt-sm;
+  color: $color-text-light;
+  font-style: italic;
+  margin: $base-spacing 0;
+}

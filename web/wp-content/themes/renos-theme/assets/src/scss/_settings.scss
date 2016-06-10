@@ -4,8 +4,8 @@
  * Typography
  * http://bourbon.io/docs/#font-stacks - use or add your own.
  */
-$base-font-family:        $helvetica;
-$secondary-font-family:   $georgia;
+$base-font-family:        -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$secondary-font-family:   $base-font-family;
 $heading-font-family:     $base-font-family;
 
 /*
@@ -22,6 +22,7 @@ $heading-line-height:   1.2;
 $base-border-radius:    3px;
 $base-spacing:          rem($base-line-height * strip-units($base-font-size));
 $small-spacing:         $base-spacing / 2;
+$large-spacing:         $base-spacing * 2;
 $base-z-index:          0;
 
 /*
@@ -31,18 +32,22 @@ $base-z-index:          0;
  * eg $color-blue instead of $color-primary.
  * These are just a few examples to get you going. Change as needed
  */
-$color-blue:            #477dca;
-$color-dark-gray:       #333;
-$color-medium-gray:     #999;
-$color-light-gray:      #ddd;
+$color-blue:            #5959AB;
+$color-gray-dark:       #333;
+$color-gray-medium:     #999;
+$color-gray-light:      #ddd;
+
+$color-white:           #fff;
+$color-black:           #000;
 
 // Font Colors
 $base-background-color: #fff;
-$base-font-color:       $color-dark-gray;
+$base-font-color:       $color-gray-dark;
+$color-text-light:      mix($base-font-color, $color-white, 50%);
 $action-color:          $color-blue;
 
 // Border
-$base-border-color:     $color-light-gray;
+$base-border-color:     $color-gray-light;
 $base-border:           1px solid $base-border-color;
 
 // Forms
@@ -64,9 +69,9 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
  * from wide to narrow, it's recommended that you change the breakpoint
  * declarations from min-width to max-width.
  */
-$lap-start:     620px;
-$desk-start:    980px;
-$wall-start:    1220px;
+$lap-start:     em(620);
+$desk-start:    em(980);
+$wall-start:    em(1220);
 
 /*
  * Body gutter
@@ -75,7 +80,7 @@ $wall-start:    1220px;
  * If you want a header/footer that stretches the full width, remove
  * the body margin rule and add it to your main content wrapper instead.
  */
-$body-gutter: 15px;
+$body-gutter: $base-spacing;
 
 /*
  * Max Widths
@@ -96,10 +101,10 @@ $wall-max:  $wall-start - (strip-units($body-gutter * 2));
  * so this seems sensible to stick to for wider screen media queries but change
  * as desired.
  */
-$palm-cols: 4;
-$lap-cols:  6;
-$desk-cols: 12;
-$wall-cols: 12;
+$palm-cols: 12;
+$lap-cols:  $palm-cols;
+$desk-cols: $lap-cols;
+$wall-cols: $desk-cols;
 
 /*
  * Use the following variables when defining breakpoints in your CSS
@@ -114,6 +119,6 @@ $wall:  new-breakpoint(min-width $wall-start $wall-cols)!global;
  * Overriding the defaults for the variables required by Neat.
  * Assuming you're starting with Palm and working up from there.
  */
-$max-width:     $palm-max!global;
-$grid-columns:  $palm-cols!global;
-$gutter:        em(30)!global;
+$max-width:     $palm-max;
+$grid-columns:  $palm-cols;
+$gutter:        em($large-spacing * 16);

@@ -1,0 +1,35 @@
+.entry-content.reno {
+  @extend %cf;
+}
+
+.reno-description {
+  @include media($lap) {
+    @include span-columns(7);
+  }
+
+  @include media($desk) {
+    @include span-columns(8);
+  }
+}
+
+.reno-sidebar {
+  @include media($lap) {
+    @include span-columns(5);
+    margin-right: 0;
+  }
+
+  @include media($desk) {
+    @include span-columns(4);
+    margin-right: 0;
+  }
+}
+
+.reno-cost {
+  @include fill-parent;
+  clear: both;
+  float: left;
+}
+
+.reno-inspiration a {
+  word-wrap: break-word
+}

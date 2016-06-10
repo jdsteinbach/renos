@@ -1,1 +1,16 @@
 // Header Styles
+.site-header {
+  border-bottom: $base-border;
+  padding: 0;
+}
+
+.site-logo {
+  @extend %tt-bq;
+  @include scale-padding(bq, 1, .5, 1, .5);
+  display: inline-block;
+}
+
+.main-nav {
+  display: inline-block;
+  float: right;
+}

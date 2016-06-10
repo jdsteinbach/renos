@@ -1,6 +1,13 @@
+@include set-hierarchy((sm, p, bq, ssh, sh, h, hero));
+$startsmall: true;
+@include add-breakpoint(default, 0em, 1.1rem, 1.5, major-scale);
+@include add-breakpoint(medium, 45em, 1.2rem, 1.618, pentatonic);
+@include add-breakpoint(large, 90em, 1.3rem, 1.618, major-triad);
+@include type-tune(extend);
+
 body {
+  @extend %tt-p;
   @include font-feature-settings("kern", "liga", "pnum");
-  -webkit-font-smoothing: antialiased;
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -14,13 +21,46 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
-  font-size: $base-font-size;
   line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
 }
 
-p {
-  margin: 0 0 $small-spacing;
+.entry-content h1 {
+  @extend %tt-h;
+  @include scale-margin(h, 1, null, .5, null);
+}
+
+.entry-title {
+  @extend %tt-h;
+  @include scale-padding(h, 1, null, 1, null);
+  border-bottom: $base-border;
+  margin: 0;
+  text-align: center;
+}
+
+.content-subhead,
+.entry-content h2 {
+  @extend %tt-sh;
+  @include scale-margin(sh, 1, null, .5, null);
+}
+
+.content-subsubhead,
+.entry-content h3 {
+  @extend %tt-ssh;
+  @include scale-margin(ssh, 1, null, .5, null);
+}
+
+.content-bq,
+.entry-content h4 {
+  @extend %tt-bq;
+  @include scale-margin(bq, 1, null, .5, null);
+}
+
+.hero-title {
+  @extend %tt-hero;
+}
+
+p:not(:last-child) {
+  @include scale-margin(p, 0, null, .5, null);
 }
 
 a {
@@ -37,6 +77,19 @@ a {
   &:active,
   &:focus {
     outline: none;
+  }
+}
+
+blockquote {
+  @extend %tt-bq;
+  border-left: $base-spacing / 2 solid currentColor;
+  color: $color-text-light;
+  font-style: italic;
+  margin-left: 0;
+  padding: $base-spacing / 2 $base-spacing;
+
+  > :last-child {
+    margin-bottom: 0;
   }
 }
 

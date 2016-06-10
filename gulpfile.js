@@ -300,7 +300,7 @@
       proxy: 'local.' + pkg.name.toLowerCase(),
       notify: true
     });
-    gulp.watch( _src_dir + '/scss/**/*', ['styles', 'restart'] );
+    gulp.watch( _src_dir + '/scss/**/*', ['styles'] );
     gulp.watch( _src_dir + '/js/**/*', ['scripts'] );
     gulp.watch( _build_dir + '/**/*.css' ).on('change', reload );
     gulp.watch( _theme_dir + '/**/*.php' ).on('change', reload );

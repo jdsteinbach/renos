@@ -1,1 +1,7 @@
 // Footer Styles
+.site-footer {
+  @include scale-margin(p, 1, null, null, null);
+  @include scale-padding(p, 1, null, 1, null);
+  border-top: $base-border;
+  text-align: center;
+}

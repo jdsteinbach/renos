@@ -1,1 +1,13 @@
 // Navigation Styles: Main, footer, etc.
+nav {
+  li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  a {
+    @extend %tt-sm;
+    @include scale-padding(sm, 1, 1, 1, 1);
+    display: block;
+    text-transform: uppercase;
+  }
+}

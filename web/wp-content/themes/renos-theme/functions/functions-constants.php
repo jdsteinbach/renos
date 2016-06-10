@@ -14,7 +14,7 @@ define( 'AUTHOR',       SITE_NAME . ' - '. WWW_URL );
 define( 'SS_URI',       get_stylesheet_directory_uri() );
 define( 'SS_DIR',       get_stylesheet_directory() );
 define( 'DEFAULT_PHOTO',  SS_URI .'/assets/img/default-photo.gif' );
-//define( 'TYPEKIT',    '123456' );
+// define( 'TYPEKIT',    'mje2ygi' );
 //define( 'FB_APP_ID',  '' );
 //define( 'FB_PAGE',    '' );
 //define( 'HCO_ACCT',   '123456' );

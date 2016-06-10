@@ -1,8 +1,8 @@
 {
-  "name": "CMN-Starter-Theme.com",
-  "shortName": "cstcom-theme",
+  "name": "steinbach.us",
+  "shortName": "renos-theme",
   "version": "1.6.0",
-  "description": "[CMN-Starter-Theme.com](http://www.cmn-starter-theme.com/) ========================================",
+  "description": "[renos.steinbach.us](http://renos.steinbach.us/) ========================================",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.6.0",
@@ -32,12 +32,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/HigherEducation/CMN-Starter-Theme.com.git"
+    "url": "https://github.com/jdsteinbach.renos.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HigherEducation/CMN-Starter-Theme.com/issues"
+    "url": "https://github.com/jdsteinbach.renos/issues"
   },
-  "homepage": "https://github.com/HigherEducation/CMN-Starter-Theme.com"
+  "homepage": "https://github.com/jdsteinbach.renos"
 }

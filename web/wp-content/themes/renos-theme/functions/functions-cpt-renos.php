@@ -24,7 +24,7 @@ function renos_renos() {
     'rewrite'             => true,
     'capability_type'     => 'post',
     'supports'            => array(
-      'title', 'editor', 'author', 'revisions', 'page-attributes'
+      'title', 'editor', 'author', 'revisions'
     )
   );
 
@@ -64,7 +64,7 @@ function renos_rooms() {
     'capabilities'      => array(),
   );
 
-  register_taxonomy( 'room', array( 'rooms' ), $args );
+  register_taxonomy( 'room', array( 'renos' ), $args );
 }
 add_action( 'init', 'renos_rooms' );
 ?>
