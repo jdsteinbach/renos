@@ -35,3 +35,21 @@
   position: absolute;
   left: -9999px;
 }
+
+@mixin fsmooth($toggle: true) {
+  @if $toggle == true {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+  } @else {
+    -webkit-font-smoothing: initial;
+    -moz-osx-font-smoothing: initial;
+  }
+}
+
+@mixin haf {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}

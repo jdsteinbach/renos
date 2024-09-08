@@ -1,14 +1,15 @@
 html {
   @include media($lap) {
-    background: $color-gray-light;
+    background: $color-gray-medium;
     padding: $base-spacing;
   }
 }
 
 body {
+  @extend %tt-p;
   @include outer-container(100ch);
+  @include scale-padding(p, 0, 1, 0, 1);
   background: $color-white;
-  padding: 0 $base-spacing;
 
   @include media($lap) {
     box-shadow: 0 ($base-spacing / 8) ($base-spacing / 2) (-$base-spacing / 8) $base-font-color;

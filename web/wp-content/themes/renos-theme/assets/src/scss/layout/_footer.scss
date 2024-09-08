@@ -1,7 +1,8 @@
 // Footer Styles
 .site-footer {
-  @include scale-margin(p, 1, null, null, null);
-  @include scale-padding(p, 1, null, 1, null);
+  @extend %tt-sm;
+  @include scale-margin(sm, 1, null, null, null);
+  @include scale-padding(sm, .5, null, .5, null);
   border-top: $base-border;
   text-align: center;
 }

@@ -8,6 +8,7 @@ include_once( 'functions/functions-constants.php' );
 
 include_once( 'functions/functions-assets.php' );
 include_once( 'functions/functions-cpt.php' );
+include_once( 'functions/functions-curl.php' );
 include_once( 'functions/functions-errors.php' );
 include_once( 'functions/functions-housekeeping.php' );
 include_once( 'functions/functions-images.php' );

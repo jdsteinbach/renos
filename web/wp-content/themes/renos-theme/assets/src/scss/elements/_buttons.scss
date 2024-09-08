@@ -1,7 +1,8 @@
 #{$all-button-inputs},
+.button,
 button {
   @include appearance(none);
-  -webkit-font-smoothing: antialiased;
+  @include fsmooth;
   background-color: $action-color;
   border-radius: $base-border-radius;
   border: none;
@@ -11,9 +12,12 @@ button {
   font-family: $base-font-family;
   font-size: $base-font-size;
   font-weight: 600;
+  letter-spacing: (1em / 32);
   line-height: 1;
   padding: 0.75em 1em;
   text-decoration: none;
+  text-transform: uppercase;
+  transition: color .25s, background .25s, border .25s;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;

@@ -33,3 +33,60 @@
 .reno-inspiration a {
   word-wrap: break-word
 }
+
+.inspiration-card {
+  @include span-columns(6 of 12);
+  box-shadow: $card-box-shadow;
+  border: .5em solid $color-white;
+
+  @include media($lap) {
+    @include span-columns(3.5 of 7);
+  }
+
+  @include media($desk) {
+    @include span-columns(4 of 8);
+  }
+}
+
+.inspiration-image {
+  @include fsmooth;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-white;
+  display: block;
+  font-weight: bold;
+  overflow: hidden;
+  padding-top: 61.8%;
+  position: relative;
+
+  span {
+    @extend %tt-sm;
+    @include scale-padding(sm, .5, .25, .5, .25);
+    @include position(absolute, 0 0 0 0);
+    background-color: rgba($color-gray-dark, .75);
+    display: block;
+    transition: transform .35s ease-in-out;
+  }
+
+  @include haf {
+    color: $color-white;
+
+    span {
+      transform: translateY(100%);
+    }
+  }
+}
+
+.reno-cost {
+  th,
+  td {
+    @include scale-padding(p, .25, .25, .25, .25);
+  }
+}
+
+.material-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

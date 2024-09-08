@@ -33,12 +33,18 @@ $base-z-index:          0;
  * These are just a few examples to get you going. Change as needed
  */
 $color-blue:            #5959AB;
-$color-gray-dark:       #333;
-$color-gray-medium:     #999;
-$color-gray-light:      #ddd;
 
-$color-white:           #fff;
+$hue-adjust:            120deg;
+
+$color-accent:          adjust-hue($color-blue, $hue-adjust);
+$color-accent-2:        adjust-hue($color-blue, 0 - $hue-adjust);
+$color-white:           #fefefe;
 $color-black:           #000;
+
+$color-gray-dark:       mix($color-accent, #333, 33%);
+$color-gray-medium:     mix($color-accent, #666, 33%);
+$color-gray-light:      mix($color-accent, #ddd, 33%);
+
 
 // Font Colors
 $base-background-color: #fff;
@@ -50,7 +56,9 @@ $action-color:          $color-blue;
 $base-border-color:     $color-gray-light;
 $base-border:           1px solid $base-border-color;
 
+
 // Forms
+$card-box-shadow:       0 1px 3px rgba($action-color, .75);
 $form-box-shadow:       inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 

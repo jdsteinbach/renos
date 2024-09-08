@@ -31,22 +31,33 @@ h6 {
 
 .entry-title {
   @extend %tt-h;
+  @include fsmooth;
+  @include scale-margin(h, null, -1, null, -1);
   @include scale-padding(h, 1, null, 1, null);
-  border-bottom: $base-border;
+  background-color: $color-accent;
+  // border-bottom: $base-border;
+  color: $color-white;
+  font-weight: normal;
+  letter-spacing: (1em / 32);
   margin: 0;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .content-subhead,
 .entry-content h2 {
   @extend %tt-sh;
   @include scale-margin(sh, 1, null, .5, null);
+  color: $color-accent-2;
 }
 
 .content-subsubhead,
 .entry-content h3 {
-  @extend %tt-ssh;
-  @include scale-margin(ssh, 1, null, .5, null);
+  @extend %tt-bq;
+  @include scale-margin(bq, 1, null, .5, null);
+  color: $color-gray-medium;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 .content-bq,

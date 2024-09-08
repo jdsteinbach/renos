@@ -21,7 +21,9 @@ $reno_details = get_fields();
           <h2>Inspiration Links</h2>
           <ul>
             <?php foreach ( $reno_details['inspiration'] as $i ) {
-              echo '<li><a href="' . $i['link'] . '">' . $i['link'] . '</a></li>';
+              $img_title = return_curl_contents( $i['link'], '<title>', '</title>' );
+              $img_url   = return_curl_contents( $i['link'], 'og:image" content="', '"' );
+              echo '<li class="inspiration-card"><a class="inspiration-image" href="' . $i['link'] . '" style="background-image:url(' . $img_url . ')"><span>' . $img_title . '</span></a></li>';
             } ?>
           </ul>
         </div>
@@ -36,8 +38,8 @@ $reno_details = get_fields();
           </div>
           <div class="reno-dates">
             <h2>Dates</h2>
-            <p class="start-date">Start Date: <?php echo date( "F j, Y", strtotime( $reno_details['start_date'] ) ); ?></p>
-            <p class="end-date">End Date: <?php echo date( "F j, Y", strtotime( $reno_details['end_date'] ) ); ?></p>
+            <p class="start-date"><b>Start Date:</b> <?php echo date( "F j, Y", strtotime( $reno_details['start_date'] ) ); ?></p>
+            <p class="end-date"><b>End Date:</b> <?php echo date( "F j, Y", strtotime( $reno_details['end_date'] ) ); ?></p>
           </div>
         </div>
         <div class="reno-cost">
@@ -45,16 +47,18 @@ $reno_details = get_fields();
           <h3>Materials</h3>
           <table>
             <tr>
+              <th></th>
               <th>Name</th>
-              <th>From</th>
               <th>Price</th>
               <th>Qty</th>
               <th>Total</th>
+              <th>From</th>
             </tr>
             <?php $cost = 0;
             foreach ( $reno_details['materials'] as $m ) {
               $cost = $cost + $m['price'] * $m['quantity'];
-              echo '<tr><td>' . $m['name'] . '</td><td><a href="' . $m['link'] . '">Buy Here</a></td><td>$' . $m['price'] . '</td><td>' . $m['quantity'] . '</td><td>$' . $m['price'] * $m['quantity'] . '</td></tr>';
+              $m_img_url = return_curl_contents( $m['link'], 'og:image" content="', '"' );
+              echo '<tr><td class="material-image" style="background-image:url(' . $m_img_url . ')"></td><td>' . $m['name'] . '</td><td>$' . $m['price'] . '</td><td>' . $m['quantity'] . '</td><td>$' . $m['price'] * $m['quantity'] . '</td><td><a class="button" href="' . $m['link'] . '">Buy Here</a></td></tr>';
             } ?>
           </table>
 
